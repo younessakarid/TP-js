@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule</title>
+</head>
+<script>
+    function addition() {
+        var nombreA = parseFloat(document.getElementById('nombreA').value);
+        var nombreB = parseFloat(document.getElementById('nombreB').value);
+        var resultat = nombreA + nombreB;
+        document.getElementById('resultat').value = resultat;
+    }
+
+    function moin() {
+        var nombreA = parseFloat(document.getElementById('nombreA').value);
+        var nombreB = parseFloat(document.getElementById('nombreB').value);
+        var resultat = nombreA - nombreB;
+        document.getElementById('resultat').value = resultat;
+    }
+
+    function multiplication() {
+        var nombreA = parseFloat(document.getElementById('nombreA').value);
+        var nombreB = parseFloat(document.getElementById('nombreB').value);
+        var resultat = nombreA * nombreB;
+        document.getElementById('resultat').value = resultat;
+    }
+
+    function division() {
+        var nombreA = parseFloat(document.getElementById('nombreA').value);
+        var nombreB = parseFloat(document.getElementById('nombreB').value);
+        var resultat = nombreA / nombreB;
+        document.getElementById('resultat').value = resultat;
+      
+    }
+    function reset() {
+        document.getElementById('nombreA').value = '';
+        document.getElementById('nombreB').value = '';
+        document.getElementById('resultat').value = '';
+    }
+
+    function submit() {
+        alert("Opération est submit");
+    }
+    
+</script>
+</body>
+<body >
+    <h1>les opération de calcul arithmétique</h1>
+
+    <label for="nombreA">Nombre A :</label>
+    <br>
+    <input type="number" id="nombreA">
+    <br>
+    <br>
+    <label for="nombreB">Nombre B :</label>
+    <br>
+    <input type="number" id="nombreB">
+    <br><br>
+
+    <label for="resultat">Résultat :</label>
+    <br>
+    <input type="text" id="resultat" readonly>
+    <br><br>
+
+    <button onclick="addition()">+</button>
+    <button onclick="moin()">-</button>
+    <button onclick="multiplication()">*</button>
+    <button onclick="division()">/</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="submit()">Submit</button>
+
+    <style>
+      input{
+        background: rgb(190, 247, 255);
+        color: red;
+      }
+     
+     input:hover{
+        background: greenyellow;
+     }  
+    </style>
+
+</body>
+</body>
+</html>

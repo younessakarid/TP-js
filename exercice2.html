@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>l'Aire d'un Carré</title>
+</head>
+<body>
+
+
+<label for="cote">Longueur du côté du carré :</label>
+<input type="number" id="cote" placeholder="Saisissez la longueur du côté">
+<button onclick="calculerPerimetreEtAire()">Calculer</button>
+
+
+<p id="resultat"></p>
+
+<script>
+    function calculerPerimetreEtAire() {
+        
+        var longueurCote = parseFloat(document.getElementById("cote").value);
+
+        
+        if (!isNaN(longueurCote) && longueurCote > 0) {
+            
+            var perimetre = 4 * longueurCote;
+
+            
+            var aire = Math.pow(longueurCote, 2);
+
+            var resultatTexte = "Périmètre : " + perimetre + " unités, Aire : " + aire + " unités carrées.";
+            document.getElementById("resultat").innerText = resultatTexte;
+        } else {
+            document.getElementById("resultat").innerText = "Veuillez saisir une valeur valide pour la longueur du côté.";
+        }
+    }
+</script>
+
+</body>
+</html>

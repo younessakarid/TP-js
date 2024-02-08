@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function convert() {
+        var eur= parseFloat(document.getElementById('eur').value) || 0;
+        var convert = 10.5;
+        var dirham= eur * convert;
+        document.getElementById ('dirham').value= dirham;
+       }
+</script>
+<body>
+    <h1> convertir en Dirhams </h1>
+    <label>Euros:</label>
+    <input type="number" id="eur">
+    <button onclick="convert()">convertir</button>
+    <br>
+    <br>
+    <label>En Dirhams:</label>
+    <input type="number" id="dirham" readonly>
+</body>
+</html>

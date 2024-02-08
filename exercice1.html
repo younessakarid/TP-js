@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> date  </title>
+</head>
+<body>
+
+<p id="date"></p>
+
+<script>
+    
+    var dateActuelle = new Date();
+
+    var jour = dateActuelle.getDate();
+    var mois = dateActuelle.getMonth() + 1; 
+    var annee = dateActuelle.getFullYear();
+
+    var dateFormatee = ("0" + jour).slice(-2) + '/' + ("0" + mois).slice(-2) + '/' + annee;
+
+    document.getElementById("date").innerText = "On est le " + dateFormatee;
+</script>
+
+</body>
+</html>

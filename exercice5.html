@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function lesmois() {
+        var moisnum = parseInt(document.getElementById('moisnum').value);
+        var lesjours = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        var numjours = lesjours[moisnum - 1];
+        document.getElementById('result').innerHTML =  numjours + " jours";
+    }
+</script>
+<body>
+    <h1>Nombre de jours dans un mois</h1>
+    <label>Saisir le numéro du mois :</label>
+    <input type="number" max="12" min="1" id="moisnum">
+    <button onclick="lesmois()">Voir</button>
+    <br>
+
+    <div id="result"></div>
+</body>
+</html>
